@@ -33,11 +33,11 @@ You can then execute `python3 main.py` for a full running.
 
 ### Notes for Off-Policy Data Reusage
 In off-policy experiments, we trained a set of behavior policies that approximately enhanced the distributional shift. While you are recommended to follow the same pipeline to retrieve code & data from our **MF.OFF.G** or **MF.OFF.N** experiments, you still need to:
-    + Replace current `offline_dataset_collector.py, policy_trainer.py, main.py` in your folder with the ones in `additional_code/off_policy`.
++ Replace current `offline_dataset_collector.py, policy_trainer.py, main.py` in your folder with the ones in `additional_code/off_policy`.
 
 ### Notes for Model-Based Data Reusage
 In model-based experiments, we necessitate the offline cache for bellman operators. While you are recommended to follow the same pipeline to retrieve code & data from our **MB.G** or **MB.N** experiments, you still need to:
-    + Drag bellman operators folder from `data/mf_on_policy_gravity/datasets`;
++ Drag bellman operators folder from `data/mf_on_policy_gravity/datasets`;
 
 ### TODO......
 
