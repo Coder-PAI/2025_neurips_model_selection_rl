@@ -8,7 +8,7 @@ Below is our recommendation with regard to experiment setup & configuration.
 
 ## Main Usage
 This part serves as a general guide for reproducing the primary results of **MF.G, MF.N, MF.OFF.G, MF.OFF.N, MB.G, and MB.N**, including analyses of **sample efficiency, misspecification, gap, convergence, and sanity checks**.
-### Notes for (Nearly) On-Policy Data Reusage
+### Notes on MF.X Reproducibility
 We exemplify the code usage on MF.G.
 + Create a separate folder for your full experiment.
 + Copy `mf_on_policy_gravity.py` from `env_setup` (the folder that gathered experimental configurations), and rename it as `parser.py`.
@@ -31,11 +31,11 @@ You can then execute `python3 main.py` for a full running.
     + Reuse our running data from `experiments_data`.
     + For example, if you are running **MF.OFF.G** experiments, copy `offline_data` from `experiments_data/mf-off-g` and adhere to the aforementioned file structure. 
 
-### Notes for Off-Policy Data Reusage
+### Notes on MF.OFF.X Reproducibility
 In off-policy experiments, we trained a set of behavior policies that approximately enhanced the distributional shift. While you are recommended to follow the same pipeline to retrieve code & data from our **MF.OFF.G** or **MF.OFF.N** experiments, you still need to:
 + Replace current `offline_dataset_collector.py, policy_trainer.py, main.py` in your folder with the ones in `additional_code/off_policy`.
 
-### Notes for Model-Based Data Reusage
+### Notes on MB.X Reproducibility
 In model-based experiments, we necessitate the offline cache for bellman operators. While you are recommended to follow the same pipeline to retrieve code & data from our **MB.G** or **MB.N** experiments, you still need to:
 + Drag bellman operators folder from `data/mf_on_policy_gravity/datasets`;
 
