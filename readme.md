@@ -16,7 +16,7 @@ Below is our recommendation with regard to experiment setup & configuration.
 | **MB.N** | -30 | $\text{LIN}(10,100,5)$ | $\{(M_i, \pi_i^{\epsilon}), i\in \{0,2,4\}\}$ | $\{\pi_{0:5}\}$ |
 | **MF.OFF.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
 | **MF.OFF.N** | -30 | $\text{LIN}(10,100,15)$ | $\{(M_i, \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
-| **MF.T.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_8 \text{~\&~} \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_8\}$ |
+| **MF.T.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_8 \text{ \& } \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_8\}$ |
 
 > **Note:** $\text{LIN}(a,b,n)$ (per NumPy convention) denotes the arithmetic sequence  
 > with $n$ elements, starting from $a$ and ending in $b$, e.g.  
