@@ -1,4 +1,7 @@
 This is an official repository for our paper [**Model Selection for Off-policy Evaluation: New Algorithms and Experimental Protocol (NeurIPS 2025 Poster)**](https://arxiv.org/pdf/2502.08021).
+****
+**It is essential to verify that the target policies, behavior policies, datasets, and function estimates match the correct version for your intended experimental setup. For example, using the MF.OFF.G data cache in an MF.G experiment may result in entirely incorrect outcomes.**
+****
 
 ## Installation
 Below is our recommendation with regard to experiment setup & configuration.
@@ -58,7 +61,3 @@ In model-based experiments, we necessitate the offline cache for bellman operato
 + Drag bellman operators folder from `data/mf_on_policy_gravity/datasets`;
 
 ### TODO......
-
-****
-**It is essential to verify that the target policies, behavior policies, datasets, and function estimates match the correct version for your intended experimental setup. For example, using the MF.OFF.G data cache in an MF.G experiment may result in entirely incorrect outcomes.**
-****
