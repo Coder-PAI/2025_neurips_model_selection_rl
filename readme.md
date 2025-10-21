@@ -1,10 +1,28 @@
-* This is an official repository for our paper [**Model Selection for Off-policy Evaluation: New Algorithms and Experimental Protocol (NeurIPS 2025 Poster)**](https://arxiv.org/pdf/2502.08021). 
+This is an official repository for our paper [**Model Selection for Off-policy Evaluation: New Algorithms and Experimental Protocol (NeurIPS 2025 Poster)**](https://arxiv.org/pdf/2502.08021).
 
 ## Installation
 Below is our recommendation with regard to experiment setup & configuration.
 + **Python Environment**
     + See `environment.yml`. We strongly recommend readers to run our code using `python 3.10` to avoid potential incompatibility.
     + For Windows users, we recommend performing the installation through `WSL`, since `Mujoco 2.3.3` is required to be set up in a Linux environment.
+ 
+## Table: Details of Experiment Settings
+
+| ID | Gravity $g$ | Noise Level $\sigma$ | Groundtruth Model $M^\star$ and Behavior Policy $\pi_b$ | Target Policies $\Pi$ |
+|----|------------------|----------------------|------------------------------------------------------------|-----------------------|
+| **MF.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_i^{\epsilon}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
+| **MF.N** | -30 | $\text{LIN}(10,100,15)$ | $\{(M_i, \pi_i^{\epsilon}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
+| **MB.G** | $\text{LIN}(-36,-24,5)$ | 100 | $\{(M_i, \pi_i^{\epsilon}), i\in \{0,2,4\}\}$ | $\{\pi_{0:5}\}$ |
+| **MB.N** | -30 | $\text{LIN}(10,100,5)$ | $\{(M_i, \pi_i^{\epsilon}), i\in \{0,2,4\}\}$ | $\{\pi_{0:5}\}$ |
+| **MF.OFF.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
+| **MF.OFF.N** | -30 | $\text{LIN}(10,100,15)$ | $\{(M_i, \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_{0:9}\}$ |
+| **MF.T.G** | $\text{LIN}(-51, -9, 15)$ | 100 | $\{(M_i, \pi_8 \text{~\&~} \pi_i^{\textrm{poor}}), i\in \{0,7,14\}\}$ | $\{\pi_8\}$ |
+
+> **Note:** $\text{LIN}(a,b,n)$ (per NumPy convention) denotes the arithmetic sequence  
+> with $n$ elements, starting from $a$ and ending in $b$, e.g.  
+> $\text{LIN}(0,1,6)=\{0, 0.2, 0.4, 0.6, 0.8, 1.0\}$.
+
+
 
 ## Main Usage
 This part serves as a general guide for reproducing the primary results of **MF.G, MF.N, MF.OFF.G, MF.OFF.N, MB.G, and MB.N**, including analyses of **sample efficiency, misspecification, gap, convergence, and sanity checks**.
