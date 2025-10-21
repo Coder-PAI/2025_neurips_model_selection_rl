@@ -1,4 +1,4 @@
-* This is an official repository for our paper **Model Selection for Off-policy Evaluation: New Algorithms and Experimental Protocol (NeurIPS 2025 Poster)**. 
+* This is an official repository for our paper [**Model Selection for Off-policy Evaluation: New Algorithms and Experimental Protocol (NeurIPS 2025 Poster)**](https://arxiv.org/pdf/2502.08021). 
 
 ## Installation
 Below is our recommendation with regard to experiment setup & configuration.
